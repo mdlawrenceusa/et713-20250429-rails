@@ -1,0 +1,705 @@
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: 3a5c7e7ae03f4ae39c61c9ac54088025.vfs.cloud9.us-east-1.amazonaws.com
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: 3a5c7e7ae03f4ae39c61c9ac54088025.vfs.cloud9.us-east-1.amazonaws.com
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: 3a5c7e7ae03f4ae39c61c9ac54088025.vfs.cloud9.us-east-1.amazonaws.com
+Started GET "/" for 146.111.194.22 at 2025-04-29 21:52:28 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='QccOrg'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='QccOrg'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='QccOrg'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20250429215005_create_students.rb
+
+
+):
+  
+activerecord (8.0.2) lib/active_record/migration.rb:743:in `check_pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.0.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (8.0.2) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.13) lib/rack/method_override.rb:28:in `call'
+rack (3.1.13) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.13) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='QccOrg'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-04-29 21:52:56.409529', '2025-04-29 21:52:56.409534') RETURNING "key" /*application='QccOrg'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='QccOrg'*/[0m
+Migrating to CreateStudents (20250429215005)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "phone" varchar, "email" varchar, "address" varchar, "city" varchar, "state" varchar, "zip_code" varchar, "texts" boolean, "calls" boolean, "internship" boolean, "higher_ed" boolean, "climate_change" boolean, "democracy" boolean, "poverty" boolean, "mass_transit" boolean, "consumer" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='QccOrg'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250429215005') RETURNING "version" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='QccOrg'*/[0m
+Started GET "/" for 146.111.194.22 at 2025-04-29 21:53:04 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='QccOrg'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.local/share/gem/ruby/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.local/share/gem/ruby/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 39ms (Views: 5.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 146.111.194.22 at 2025-04-29 21:53:09 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.local/share/gem/ruby/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.local/share/gem/ruby/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/s" for 146.111.194.22 at 2025-04-29 21:53:16 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/s"):
+  
+Started GET "/students" for 146.111.194.22 at 2025-04-29 21:53:31 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='QccOrg',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:8
+  Rendered students/index.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | GC: 0.9ms)
+Completed 200 OK in 55ms (Views: 11.5ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 4.8ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 146.111.194.22 at 2025-04-29 21:53:31 +0000
+Started GET "/assets/application-bfcdf840.js" for 146.111.194.22 at 2025-04-29 21:53:31 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/assets/turbo.min-1262d735.js" for 146.111.194.22 at 2025-04-29 21:53:31 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/assets/stimulus.min-4b1e420e.js" for 146.111.194.22 at 2025-04-29 21:53:31 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for 146.111.194.22 at 2025-04-29 21:53:31 +0000
+Started GET "/assets/controllers/application-3affb389.js" for 146.111.194.22 at 2025-04-29 21:53:31 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 146.111.194.22 at 2025-04-29 21:53:31 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/assets/controllers/index-ee64e1f1.js" for 146.111.194.22 at 2025-04-29 21:53:31 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/students/new" for 146.111.194.22 at 2025-04-29 21:53:33 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (Duration: 29.4ms | GC: 0.0ms)
+  Rendered students/new.html.erb within layouts/application (Duration: 34.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.9ms | GC: 0.0ms)
+Completed 200 OK in 68ms (Views: 46.6ms | ActiveRecord: 0.6ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started POST "/students" for 146.111.194.22 at 2025-04-29 21:53:46 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "student"=>{"first_name"=>"Jon", "last_name"=>"smith", "phone"=>"", "email"=>"[FILTERED]", "address"=>"", "city"=>"", "state"=>"", "zip_code"=>"", "texts"=>"0", "calls"=>"0", "internship"=>"0", "higher_ed"=>"0", "climate_change"=>"0", "democracy"=>"0", "poverty"=>"0", "mass_transit"=>"0", "consumer"=>"0"}, "commit"=>"Create Student"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='QccOrg',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:27:in `block in create'
+  [1m[36mStudent Create (2.2ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Jon', 'smith', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '2025-04-29 21:53:46.816788', '2025-04-29 21:53:46.816788') RETURNING "id" /*action='create',application='QccOrg',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='QccOrg',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:27:in `block in create'
+Redirected to https://3a5c7e7ae03f4ae39c61c9ac54088025.vfs.cloud9.us-east-1.amazonaws.com/students/1
+Completed 302 Found in 22ms (ActiveRecord: 5.9ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/students/1" for 146.111.194.22 at 2025-04-29 21:53:46 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='QccOrg',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:63:in `set_student'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/_student.html.erb (Duration: 1.4ms | GC: 0.3ms)
+  Rendered students/show.html.erb within layouts/application (Duration: 5.0ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.3ms)
+Completed 200 OK in 21ms (Views: 6.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/students/1/edit" for 146.111.194.22 at 2025-04-29 21:58:32 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='edit',application='QccOrg',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:63:in `set_student'
+  Rendering layout layouts/application.html.erb
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/_form.html.erb (Duration: 4.4ms | GC: 0.0ms)
+  Rendered students/edit.html.erb within layouts/application (Duration: 5.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 8.2ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/students" for 146.111.194.22 at 2025-04-29 21:58:32 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='QccOrg',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:8
+  Rendered students/_student.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered students/index.html.erb within layouts/application (Duration: 4.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 5.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students" for 146.111.194.22 at 2025-04-29 21:59:03 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='QccOrg',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:53
+  Rendered students/index.html.erb within layouts/application (Duration: 10.9ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | GC: 0.6ms)
+Completed 200 OK in 25ms (Views: 14.3ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/students/1" for 146.111.194.22 at 2025-04-29 21:59:59 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='QccOrg',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:63:in `set_student'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass)
+Caused by: NoMethodError (undefined method `each' for nil:NilClass)
+
+Information for: ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    49:         </tr>
+    50:       </thead>
+    51:       <tbody>
+    52:         <% @students.each do |student| %>
+    53:           <tr class="<%= cycle('', 'w3-pale-blue') %>">
+    54:             <td class="w3-center"><input type="checkbox" class="student-select" data-id="<%= student.id %>"></td>
+    55:             <td>
+  
+app/views/students/show.html.erb:52
+
+Information for cause: NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/views/students/show.html.erb:52
+Started GET "/students/1" for 146.111.194.22 at 2025-04-29 22:01:08 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='show',application='QccOrg',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:63:in `set_student'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 26ms (Views: 5.8ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/students/1" for 146.111.194.22 at 2025-04-29 22:01:14 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 1 LIMIT 1 /*action='destroy',application='QccOrg',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:63:in `set_student'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='QccOrg',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:52:in `destroy'
+  [1m[36mStudent Destroy (0.9ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = 1 /*action='destroy',application='QccOrg',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='QccOrg',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:52:in `destroy'
+Redirected to https://3a5c7e7ae03f4ae39c61c9ac54088025.vfs.cloud9.us-east-1.amazonaws.com/students
+Completed 303 See Other in 15ms (ActiveRecord: 3.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students" for 146.111.194.22 at 2025-04-29 22:01:14 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='QccOrg',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:53
+  Rendered students/index.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 6.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/new" for 146.111.194.22 at 2025-04-29 22:02:45 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (Duration: 10.3ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | GC: 0.6ms)
+Completed 200 OK in 36ms (Views: 15.0ms | ActiveRecord: 1.6ms (0 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/students/new" for 146.111.194.22 at 2025-04-29 22:02:53 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (Duration: 3.4ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.2ms)
+Completed 200 OK in 13ms (Views: 4.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/students" for 146.111.194.22 at 2025-04-29 22:04:47 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (1.3ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='QccOrg',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:53
+  Rendered students/index.html.erb within layouts/application (Duration: 5.2ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | GC: 0.3ms)
+Completed 200 OK in 25ms (Views: 10.3ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/students" for 146.111.194.22 at 2025-04-29 22:05:28 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='QccOrg',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:53
+  Rendered students/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 6.2ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students" for 146.111.194.22 at 2025-04-29 22:06:41 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='QccOrg',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:53
+  Rendered students/index.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 6.6ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students" for 146.111.194.22 at 2025-04-29 22:07:32 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='QccOrg',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:53
+  Rendered students/index.html.erb within layouts/application (Duration: 4.2ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | GC: 0.5ms)
+Completed 200 OK in 20ms (Views: 7.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/" for 146.111.194.22 at 2025-04-29 22:08:44 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='QccOrg',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:53
+  Rendered students/index.html.erb within layouts/application (Duration: 4.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | GC: 0.4ms)
+Completed 200 OK in 22ms (Views: 9.7ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/favicon.ico" for 146.111.194.22 at 2025-04-29 22:08:44 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='QccOrg'*/[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.3ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Jamar', 'O''Kon', '(845) 420-7843', 'taylor.ortiz@smith.example', '91958 Jewell Square', 'Buffalo', 'NY', '56302', 0, 1, 0, 1, 0, 1, 1, 0, 1, '2025-04-29 22:12:29.360134', '2025-04-29 22:12:29.360134') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Marcela', 'Connelly', '(929) 755-7711', 'laurence@carroll.example', '540 Lawanna Inlet', 'Utica', 'NY', '29912', 1, 0, 1, 1, 0, 1, 0, 1, 0, '2025-04-29 22:12:29.372139', '2025-04-29 22:12:29.372139') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Velda', 'Lehner', '(929) 344-3480', 'wilhemina@gutkowski.test', '742 Francisco Loop', 'New Rochelle', 'NY', '90237', 1, 1, 1, 1, 1, 0, 0, 1, 0, '2025-04-29 22:12:29.380198', '2025-04-29 22:12:29.380198') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.4ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Buena', 'Emmerich', '(607) 656-4427', 'armando@wiegand.test', '159 Dibbert Harbors', 'Albany', 'NY', '51746', 0, 0, 1, 1, 0, 0, 1, 0, 0, '2025-04-29 22:12:29.388140', '2025-04-29 22:12:29.388140') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Analisa', 'Rutherford', '(631) 862-2533', 'naoma@konopelski-parker.test', '68724 Elmo Crescent', 'Glen Cove', 'NY', '80131', 1, 1, 0, 1, 0, 0, 0, 0, 1, '2025-04-29 22:12:29.396239', '2025-04-29 22:12:29.396239') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.6ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Dante', 'Batz', '(315) 720-4882', 'buster@beatty-satterfield.test', '473 Tuan Branch', 'Schenectady', 'NY', '02661', 1, 1, 1, 1, 1, 0, 0, 0, 0, '2025-04-29 22:12:29.407088', '2025-04-29 22:12:29.407088') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.2ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Hwa', 'Jerde', '(332) 230-5168', 'michael@vonrueden-bergstrom.test', '44180 Legros View', 'Valley Stream', 'NY', '16524', 1, 1, 1, 1, 0, 0, 0, 1, 1, '2025-04-29 22:12:29.416841', '2025-04-29 22:12:29.416841') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Emmanuel', 'Abshire', '(607) 669-7764', 'lonnie.bartoletti@lubowitz.example', '7684 Moore Hollow', 'Schenectady', 'NY', '86940', 1, 1, 0, 0, 1, 1, 0, 0, 0, '2025-04-29 22:12:29.424737', '2025-04-29 22:12:29.424737') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.2ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Bev', 'Baumbach', '(315) 862-8271', 'ken.pfannerstill@satterfield.test', '74891 Rochel Spring', 'Staten Island', 'NY', '24983', 1, 1, 0, 0, 0, 0, 1, 0, 0, '2025-04-29 22:12:29.432523', '2025-04-29 22:12:29.432523') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.3ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Ian', 'Medhurst', '(718) 758-9240', 'issac.simonis@blanda-greenholt.test', '18449 Von Mall', 'Rochester', 'NY', '68715', 0, 1, 1, 1, 1, 1, 0, 1, 0, '2025-04-29 22:12:29.440595', '2025-04-29 22:12:29.440595') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.6ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Rodrigo', 'Gerlach', '(716) 372-9623', 'samual@stark.test', '5463 O''Reilly Mews', 'Bronx', 'NY', '17079', 1, 0, 1, 1, 0, 0, 1, 0, 0, '2025-04-29 22:12:29.449855', '2025-04-29 22:12:29.449855') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Mariella', 'Nader', '(917) 506-1304', 'julissa@stanton-lemke.test', '6532 Boehm Brook', 'Mount Vernon', 'NY', '87042', 1, 1, 0, 1, 0, 1, 1, 0, 0, '2025-04-29 22:12:29.458001', '2025-04-29 22:12:29.458001') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.6ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Margarita', 'Gibson', '(934) 418-7906', 'mary.dach@grant.example', '835 Osvaldo Flat', 'White Plains', 'NY', '24811', 0, 0, 0, 0, 1, 0, 1, 0, 0, '2025-04-29 22:12:29.465069', '2025-04-29 22:12:29.465069') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.2ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Gonzalo', 'Senger', '(212) 839-1079', 'ivan.carter@upton.test', '18247 O''Kon Lodge', 'Staten Island', 'NY', '99486', 0, 1, 1, 0, 0, 0, 0, 0, 1, '2025-04-29 22:12:29.470520', '2025-04-29 22:12:29.470520') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.2ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Branden', 'Gerhold', '(516) 233-8904', 'tesha_mertz@rodriguez-osinski.example', '37280 Deckow Island', 'Mount Vernon', 'NY', '31862', 1, 1, 0, 0, 0, 0, 0, 1, 0, '2025-04-29 22:12:29.474993', '2025-04-29 22:12:29.474993') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Tena', 'Weber', '(516) 505-6337', 'florence.zulauf@rempel.example', '9783 Michaele Turnpike', 'Utica', 'NY', '81329', 1, 1, 0, 1, 1, 1, 0, 1, 0, '2025-04-29 22:12:29.479753', '2025-04-29 22:12:29.479753') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Cleo', 'McDermott', '(585) 262-7086', 'erline@spinka-hauck.example', '5565 Schimmel Bypass', 'Hempstead', 'NY', '61592', 1, 1, 0, 0, 0, 1, 1, 0, 0, '2025-04-29 22:12:29.486907', '2025-04-29 22:12:29.486907') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Laveta', 'Spencer', '(607) 410-1740', 'johnathon@ebert-fadel.test', '43366 Annetta Bypass', 'Glen Cove', 'NY', '82962', 1, 1, 0, 1, 0, 1, 1, 0, 1, '2025-04-29 22:12:29.494665', '2025-04-29 22:12:29.494665') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Vashti', 'Fay', '(917) 537-8024', 'gavin@rohan.test', '342 Frami Fields', 'Syracuse', 'NY', '72707', 1, 1, 1, 1, 1, 0, 1, 1, 0, '2025-04-29 22:12:29.501735', '2025-04-29 22:12:29.501735') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Cole', 'Bartell', '(518) 346-4748', 'kortney@leuschke-crona.example', '51918 Krajcik Lakes', 'Yonkers', 'NY', '15385', 1, 1, 0, 1, 0, 1, 1, 0, 0, '2025-04-29 22:12:29.508507', '2025-04-29 22:12:29.508507') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Wilber', 'Herzog', '(646) 709-4097', 'johnny_mann@stroman-barton.example', '843 Runolfsdottir Road', 'Hempstead', 'NY', '71066', 1, 0, 1, 0, 0, 0, 0, 0, 0, '2025-04-29 22:12:29.515824', '2025-04-29 22:12:29.515824') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Renata', 'Adams', '(631) 233-6514', 'fred.hansen@dickens-bogan.test', '63645 Oberbrunner Grove', 'Rochester', 'NY', '04220', 0, 1, 0, 1, 0, 1, 0, 0, 0, '2025-04-29 22:12:29.522924', '2025-04-29 22:12:29.522924') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Brenda', 'Wehner', '(631) 316-4324', 'edyth@kohler.test', '300 Schumm Flats', 'White Plains', 'NY', '85250', 1, 1, 0, 1, 0, 1, 0, 0, 0, '2025-04-29 22:12:29.529888', '2025-04-29 22:12:29.529888') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.1ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Margret', 'Tillman', '(845) 178-8957', 'jamie@windler-kshlerin.example', '73405 Marquis Ridge', 'Glen Cove', 'NY', '29813', 0, 0, 0, 0, 1, 0, 1, 0, 0, '2025-04-29 22:12:29.537074', '2025-04-29 22:12:29.537074') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Ligia', 'Thompson', '(917) 967-7441', 'kayleigh@zieme-schmitt.example', '71810 Feeney Throughway', 'Bronx', 'NY', '85764', 1, 1, 0, 1, 0, 0, 1, 0, 1, '2025-04-29 22:12:29.544691', '2025-04-29 22:12:29.544691') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Garland', 'Willms', '(585) 776-9958', 'renee_gibson@skiles.example', '43609 Daniela Light', 'New York', 'NY', '02598', 1, 0, 0, 0, 1, 1, 1, 0, 0, '2025-04-29 22:12:29.551974', '2025-04-29 22:12:29.551974') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Harland', 'Luettgen', '(917) 205-1440', 'rosalva_balistreri@medhurst-pollich.test', '267 Gidget Rue', 'White Plains', 'NY', '50038', 0, 0, 0, 0, 1, 1, 0, 1, 1, '2025-04-29 22:12:29.559123', '2025-04-29 22:12:29.559123') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Tobias', 'Leffler', '(718) 108-6402', 'kassie@hammes-ziemann.example', '44107 Blair Run', 'Glen Cove', 'NY', '19755', 1, 1, 0, 1, 0, 0, 0, 0, 0, '2025-04-29 22:12:29.566480', '2025-04-29 22:12:29.566480') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Carli', 'Bradtke', '(934) 291-4591', 'barney@heathcote.example', '6473 Lang Tunnel', 'Valley Stream', 'NY', '75732', 0, 1, 1, 0, 0, 1, 1, 0, 0, '2025-04-29 22:12:29.573286', '2025-04-29 22:12:29.573286') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (13.5ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Madlyn', 'Block', '(347) 880-6242', 'gus@howe-bartoletti.example', '3251 Marty Street', 'Schenectady', 'NY', '82207', 0, 1, 1, 0, 1, 0, 1, 0, 0, '2025-04-29 22:12:29.580879', '2025-04-29 22:12:29.580879') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Elbert', 'Schultz', '(347) 962-9061', 'yvonne_feil@connelly-rosenbaum.example', '5330 Sanford Valleys', 'New York', 'NY', '48689', 0, 1, 0, 1, 1, 0, 1, 0, 1, '2025-04-29 22:12:29.599787', '2025-04-29 22:12:29.599787') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Louie', 'Romaguera', '(845) 261-5532', 'lilliam.stiedemann@thompson.example', '74409 Emmerich Light', 'Buffalo', 'NY', '77702', 0, 1, 1, 1, 1, 0, 1, 0, 1, '2025-04-29 22:12:29.607070', '2025-04-29 22:12:29.607070') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Tempie', 'Jacobi', '(607) 334-1908', 'carmelo.friesen@bartoletti.test', '5615 Colby Course', 'White Plains', 'NY', '31459', 1, 1, 0, 1, 0, 1, 0, 1, 1, '2025-04-29 22:12:29.614127', '2025-04-29 22:12:29.614127') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Albert', 'Goldner', '(212) 224-2470', 'earl@koss.test', '945 Kristofer Wells', 'Albany', 'NY', '62376', 1, 1, 0, 1, 1, 1, 0, 0, 0, '2025-04-29 22:12:29.621356', '2025-04-29 22:12:29.621356') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Eustolia', 'Reichel', '(934) 142-8006', 'tiffiny@hudson.example', '736 Roberts Mills', 'Syracuse', 'NY', '47173', 1, 1, 0, 1, 0, 1, 1, 0, 0, '2025-04-29 22:12:29.628203', '2025-04-29 22:12:29.628203') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.6ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Johnny', 'Hahn', '(518) 487-8446', 'brianna@lueilwitz.example', '827 Zemlak Loaf', 'New York', 'NY', '86012', 1, 1, 0, 0, 1, 0, 0, 0, 0, '2025-04-29 22:12:29.635307', '2025-04-29 22:12:29.635307') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Madalyn', 'Green', '(646) 112-6857', 'vito_mohr@stamm.test', '7607 Glover Motorway', 'Bronx', 'NY', '29429', 0, 0, 0, 1, 0, 0, 0, 1, 0, '2025-04-29 22:12:29.644469', '2025-04-29 22:12:29.644469') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.1ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Annamaria', 'Legros', '(518) 311-3345', 'maryalice_bayer@marvin-schamberger.example', '9019 Vandervort Ramp', 'Brooklyn', 'NY', '85489', 0, 1, 0, 1, 1, 0, 0, 1, 0, '2025-04-29 22:12:29.651918', '2025-04-29 22:12:29.651918') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Daniella', 'Volkman', '(607) 614-9174', 'mack_haley@jacobson.test', '549 Nathanael Bridge', 'Valley Stream', 'NY', '40093', 0, 1, 0, 1, 0, 0, 0, 0, 1, '2025-04-29 22:12:29.659305', '2025-04-29 22:12:29.659305') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.6ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Iesha', 'Hamill', '(914) 934-2279', 'cleveland@murazik.example', '52843 Ward Valleys', 'Hempstead', 'NY', '81638', 1, 0, 0, 0, 0, 1, 1, 0, 1, '2025-04-29 22:12:29.666479', '2025-04-29 22:12:29.666479') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.6ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Collin', 'Leffler', '(631) 455-6301', 'chi.marvin@hauck.example', '89637 Raymundo Isle', 'Brooklyn', 'NY', '00991', 0, 0, 0, 0, 1, 1, 1, 0, 1, '2025-04-29 22:12:29.673451', '2025-04-29 22:12:29.673451') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.1ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Royal', 'Collins', '(934) 306-3649', 'chas_gulgowski@langosh.example', '959 Parker Inlet', 'Long Beach', 'NY', '91487', 1, 1, 0, 0, 0, 0, 1, 1, 0, '2025-04-29 22:12:29.679974', '2025-04-29 22:12:29.679974') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.1ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Samatha', 'Jerde', '(680) 150-3134', 'whitney_heidenreich@quitzon.test', '86502 Carroll Passage', 'Hempstead', 'NY', '38478', 1, 1, 0, 0, 0, 0, 1, 1, 0, '2025-04-29 22:12:29.684472', '2025-04-29 22:12:29.684472') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Dennis', 'Marvin', '(516) 164-5016', 'cleo@mcdermott.test', '6860 Reyes Inlet', 'Valley Stream', 'NY', '39173', 0, 1, 1, 1, 0, 1, 1, 0, 0, '2025-04-29 22:12:29.688847', '2025-04-29 22:12:29.688847') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.2ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Melina', 'Monahan', '(585) 111-8245', 'carina@schimmel-miller.example', '3116 Glory Station', 'White Plains', 'NY', '92815', 0, 1, 0, 0, 1, 0, 0, 1, 0, '2025-04-29 22:12:29.696095', '2025-04-29 22:12:29.696095') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Madalyn', 'Huels', '(607) 458-4067', 'leslie@nienow-reichert.example', '741 Conn Place', 'Rochester', 'NY', '81691', 0, 1, 1, 1, 0, 0, 0, 0, 0, '2025-04-29 22:12:29.703716', '2025-04-29 22:12:29.703716') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Bert', 'Fay', '(929) 642-5487', 'angelina@cummings.test', '27598 Arlene Forges', 'New York', 'NY', '69040', 1, 1, 1, 0, 0, 0, 1, 1, 0, '2025-04-29 22:12:29.710842', '2025-04-29 22:12:29.710842') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Chad', 'O''Conner', '(716) 316-7162', 'lesley@upton.test', '4738 Huels Flat', 'Valley Stream', 'NY', '93122', 1, 1, 0, 0, 0, 0, 0, 1, 0, '2025-04-29 22:12:29.718546', '2025-04-29 22:12:29.718546') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Ciara', 'Dietrich', '(607) 722-1843', 'melvin@lesch.test', '59625 Lemke Light', 'Long Beach', 'NY', '59997', 1, 0, 0, 0, 0, 0, 0, 1, 0, '2025-04-29 22:12:29.725611', '2025-04-29 22:12:29.725611') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.2ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Bari', 'Runte', '(518) 709-7910', 'candyce@greenfelder-monahan.example', '10387 Dooley Landing', 'Long Beach', 'NY', '73382', 1, 1, 0, 1, 1, 0, 0, 0, 0, '2025-04-29 22:12:29.733247', '2025-04-29 22:12:29.733247') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Donald', 'Friesen', '(845) 179-9080', 'stan@oconnell.example', '946 Conn Parks', 'Buffalo', 'NY', '24493', 1, 0, 0, 1, 0, 0, 1, 1, 0, '2025-04-29 22:12:29.740620', '2025-04-29 22:12:29.740620') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Frankie', 'Klein', '(585) 208-7412', 'wilmer.klein@gerhold.test', '415 Sauer Plaza', 'Staten Island', 'NY', '98333', 0, 0, 0, 0, 0, 1, 0, 1, 0, '2025-04-29 22:12:29.748605', '2025-04-29 22:12:29.748605') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Vennie', 'Cassin', '(607) 397-5917', 'violeta@langworth.example', '213 Elijah Place', 'Long Beach', 'NY', '53612', 1, 1, 0, 1, 1, 0, 1, 0, 0, '2025-04-29 22:12:29.755966', '2025-04-29 22:12:29.755966') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Lane', 'Kozey', '(607) 415-5925', 'burt@sipes.test', '664 Pacocha Rapid', 'Brooklyn', 'NY', '85498', 0, 1, 1, 0, 1, 1, 0, 0, 0, '2025-04-29 22:12:29.763213', '2025-04-29 22:12:29.763213') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Beth', 'Stark', '(917) 475-8260', 'reanna@wunsch-ebert.example', '678 Tony Mall', 'Brooklyn', 'NY', '16016', 1, 1, 0, 0, 1, 0, 0, 0, 0, '2025-04-29 22:12:29.770928', '2025-04-29 22:12:29.770928') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Marivel', 'Jakubowski', '(934) 222-7573', 'earnest_hahn@dubuque.example', '5752 Quigley Throughway', 'Bronx', 'NY', '99955', 0, 1, 0, 0, 0, 1, 1, 0, 0, '2025-04-29 22:12:29.778429', '2025-04-29 22:12:29.778429') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.3ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Benedict', 'Batz', '(212) 463-2687', 'kevin.wisoky@gutkowski.test', '130 Walker Manors', 'Bronx', 'NY', '19290', 1, 0, 1, 0, 0, 1, 1, 1, 0, '2025-04-29 22:12:29.786035', '2025-04-29 22:12:29.786035') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.6ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Krystin', 'Langosh', '(845) 254-4433', 'tobie@farrell-pfannerstill.test', '5012 Leffler Grove', 'Glen Cove', 'NY', '14342', 1, 0, 1, 0, 1, 0, 0, 0, 0, '2025-04-29 22:12:29.793700', '2025-04-29 22:12:29.793700') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Ralph', 'Yundt', '(914) 294-9664', 'stephine_collins@bechtelar.test', '20021 Heathcote Harbors', 'Hempstead', 'NY', '99711', 0, 1, 1, 1, 0, 0, 1, 1, 0, '2025-04-29 22:12:29.801297', '2025-04-29 22:12:29.801297') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Sau', 'Fisher', '(718) 101-8242', 'anjanette@larson.example', '923 Watsica Junction', 'Schenectady', 'NY', '83545', 1, 1, 0, 0, 1, 0, 1, 1, 0, '2025-04-29 22:12:29.809015', '2025-04-29 22:12:29.809015') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Oswaldo', 'Conroy', '(315) 763-5568', 'shonda@lowe.test', '481 Ankunding Island', 'Schenectady', 'NY', '53391', 1, 1, 0, 0, 1, 0, 0, 0, 0, '2025-04-29 22:12:29.816074', '2025-04-29 22:12:29.816074') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Tawnya', 'Stanton', '(716) 439-6970', 'selina.mills@wilderman.test', '4477 Alvaro Brooks', 'Long Beach', 'NY', '54432', 1, 1, 1, 1, 0, 0, 0, 0, 0, '2025-04-29 22:12:29.823345', '2025-04-29 22:12:29.823345') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (3.5ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Laurence', 'Feest', '(929) 130-2476', 'kip_wisozk@koch.test', '16077 Wisoky Mills', 'Schenectady', 'NY', '01520', 0, 1, 0, 0, 1, 0, 0, 1, 0, '2025-04-29 22:12:29.830745', '2025-04-29 22:12:29.830745') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Lillian', 'Feeney', '(212) 564-4661', 'griselda_metz@effertz.test', '1277 Cassin Corner', 'Hempstead', 'NY', '07357', 0, 0, 0, 1, 1, 0, 1, 0, 0, '2025-04-29 22:12:29.840346', '2025-04-29 22:12:29.840346') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Amberly', 'Hoppe', '(631) 461-6702', 'jarred@mckenzie.test', '778 Roob Rapids', 'Bronx', 'NY', '71566', 1, 0, 0, 1, 1, 1, 1, 0, 0, '2025-04-29 22:12:29.847492', '2025-04-29 22:12:29.847492') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.1ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Dewayne', 'Pagac', '(716) 342-3628', 'xiomara@koepp.example', '23990 Calandra Shoals', 'Yonkers', 'NY', '88440', 1, 0, 1, 0, 1, 0, 0, 1, 0, '2025-04-29 22:12:29.855007', '2025-04-29 22:12:29.855007') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Andria', 'Ritchie', '(518) 175-7165', 'merideth@mcclure.example', '4735 McDermott Track', 'Glen Cove', 'NY', '62998', 0, 1, 1, 1, 1, 1, 1, 1, 0, '2025-04-29 22:12:29.862479', '2025-04-29 22:12:29.862479') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Gay', 'Stamm', '(917) 831-1296', 'aurea_roob@harvey.test', '3854 Becker Stravenue', 'Rochester', 'NY', '13467', 1, 1, 0, 0, 1, 0, 1, 0, 0, '2025-04-29 22:12:29.869426', '2025-04-29 22:12:29.869426') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Samatha', 'Hackett', '(718) 210-1866', 'frankie_gottlieb@gusikowski-sporer.example', '92726 Bud Shore', 'Valley Stream', 'NY', '90316', 1, 1, 0, 0, 0, 0, 1, 0, 1, '2025-04-29 22:12:29.876961', '2025-04-29 22:12:29.876961') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Rosy', 'Koch', '(516) 936-3766', 'willy@dietrich-marvin.example', '6599 Bernier Land', 'Albany', 'NY', '25717', 1, 1, 0, 0, 1, 0, 0, 1, 0, '2025-04-29 22:12:29.883868', '2025-04-29 22:12:29.883868') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Errol', 'Carroll', '(347) 170-8688', 'vito@osinski.test', '65843 Andrea Overpass', 'Schenectady', 'NY', '41836', 1, 0, 1, 1, 1, 1, 0, 0, 0, '2025-04-29 22:12:29.891752', '2025-04-29 22:12:29.891752') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Shaniqua', 'Nikolaus', '(680) 606-9099', 'sharmaine.hills@upton.test', '5297 Dylan Causeway', 'Valley Stream', 'NY', '97089', 0, 1, 0, 1, 1, 0, 0, 1, 1, '2025-04-29 22:12:29.898811', '2025-04-29 22:12:29.898811') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Alonso', 'Fisher', '(332) 766-7819', 'charlyn.jakubowski@ankunding.example', '349 Karolyn Shore', 'Utica', 'NY', '99704', 1, 1, 0, 1, 0, 0, 0, 0, 0, '2025-04-29 22:12:29.906211', '2025-04-29 22:12:29.906211') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Miles', 'Breitenberg', '(516) 927-1470', 'aldo_leffler@breitenberg-wilkinson.example', '96922 Beatty Loaf', 'New Rochelle', 'NY', '74209', 1, 1, 1, 1, 1, 0, 1, 0, 0, '2025-04-29 22:12:29.913494', '2025-04-29 22:12:29.913494') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Antione', 'Kihn', '(347) 650-8457', 'minda@schoen-morar.example', '874 Hollis Junctions', 'Freeport', 'NY', '54242', 1, 0, 0, 0, 0, 0, 0, 1, 0, '2025-04-29 22:12:29.920634', '2025-04-29 22:12:29.920634') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Wilton', 'Marvin', '(347) 317-7599', 'maida_heidenreich@bartell-konopelski.example', '13581 Marylin Tunnel', 'Mount Vernon', 'NY', '68127', 1, 1, 0, 0, 1, 1, 0, 0, 0, '2025-04-29 22:12:29.928093', '2025-04-29 22:12:29.928093') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Jamie', 'Donnelly', '(680) 988-2592', 'ona_flatley@gerhold-moen.example', '148 Gregory Road', 'Glen Cove', 'NY', '99751', 1, 0, 0, 0, 1, 0, 0, 0, 0, '2025-04-29 22:12:29.935017', '2025-04-29 22:12:29.935017') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Hermelinda', 'Wintheiser', '(716) 111-2145', 'adele@swift.example', '66469 Lupe Rest', 'Hempstead', 'NY', '75242', 0, 1, 0, 0, 1, 1, 1, 0, 0, '2025-04-29 22:12:29.942077', '2025-04-29 22:12:29.942077') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Orval', 'Jast', '(680) 982-9348', 'carolina@kris.test', '989 Tari Springs', 'Albany', 'NY', '94056', 1, 0, 0, 1, 0, 1, 0, 0, 1, '2025-04-29 22:12:29.949050', '2025-04-29 22:12:29.949050') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Justin', 'Wintheiser', '(212) 256-8842', 'tory_ondricka@brown.example', '678 Cruz Isle', 'White Plains', 'NY', '58834', 0, 1, 0, 1, 0, 1, 0, 0, 0, '2025-04-29 22:12:29.956633', '2025-04-29 22:12:29.956633') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Kenton', 'Lehner', '(680) 287-8085', 'judson@kilback-okeefe.example', '579 Dee Bridge', 'Schenectady', 'NY', '88191', 1, 1, 1, 0, 1, 1, 1, 0, 0, '2025-04-29 22:12:29.964143', '2025-04-29 22:12:29.964143') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Jordon', 'Barrows', '(518) 315-5482', 'ignacia@raynor-jerde.example', '82968 Schamberger Green', 'Schenectady', 'NY', '15641', 1, 1, 0, 1, 0, 0, 1, 1, 1, '2025-04-29 22:12:29.971111', '2025-04-29 22:12:29.971111') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Ray', 'Kemmer', '(914) 895-6112', 'terrance_beahan@cartwright.test', '2383 Friesen Alley', 'New York', 'NY', '61393', 0, 0, 0, 0, 0, 0, 1, 1, 1, '2025-04-29 22:12:29.978680', '2025-04-29 22:12:29.978680') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Alethia', 'Hilpert', '(845) 272-7810', 'loren.dooley@dare.test', '921 Spinka Walk', 'Bronx', 'NY', '33888', 0, 1, 1, 0, 0, 0, 1, 0, 0, '2025-04-29 22:12:29.985890', '2025-04-29 22:12:29.985890') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Katharine', 'Bartoletti', '(646) 988-1781', 'demetra@bruen.example', '9736 Jeromy Glens', 'Bronx', 'NY', '17408', 0, 1, 0, 1, 0, 0, 0, 1, 0, '2025-04-29 22:12:29.993122', '2025-04-29 22:12:29.993122') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Amberly', 'Wehner', '(680) 573-9403', 'rachal@lowe-krajcik.example', '3664 Bernhard Avenue', 'Glen Cove', 'NY', '06789', 0, 1, 0, 1, 0, 0, 0, 1, 0, '2025-04-29 22:12:30.000513', '2025-04-29 22:12:30.000513') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Shad', 'Cassin', '(585) 587-5244', 'aubrey.kassulke@mertz-rutherford.example', '24529 Mohr Field', 'Syracuse', 'NY', '08428', 0, 0, 0, 1, 0, 1, 1, 1, 0, '2025-04-29 22:12:30.008508', '2025-04-29 22:12:30.008508') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Daron', 'Zemlak', '(347) 563-8872', 'carmela@glover.example', '83552 Birdie Rue', 'New Rochelle', 'NY', '79018', 1, 1, 0, 0, 1, 0, 0, 0, 0, '2025-04-29 22:12:30.016401', '2025-04-29 22:12:30.016401') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Hettie', 'Graham', '(585) 205-3576', 'vernita@barrows-donnelly.example', '6065 Laci Hill', 'Buffalo', 'NY', '09863', 1, 1, 1, 0, 0, 0, 0, 0, 0, '2025-04-29 22:12:30.024006', '2025-04-29 22:12:30.024006') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Dale', 'Dickinson', '(646) 667-3316', 'erick@robel.example', '523 Grant Springs', 'New Rochelle', 'NY', '49326', 0, 1, 0, 1, 1, 0, 0, 0, 0, '2025-04-29 22:12:30.031216', '2025-04-29 22:12:30.031216') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Duane', 'Wintheiser', '(929) 684-4139', 'preston@johnston.example', '14930 Pa Roads', 'Freeport', 'NY', '07409', 1, 0, 1, 1, 1, 1, 0, 0, 0, '2025-04-29 22:12:30.039049', '2025-04-29 22:12:30.039049') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Allan', 'Boyle', '(914) 653-4122', 'aaron@cremin.test', '3810 Kris Lock', 'Syracuse', 'NY', '84403', 1, 1, 0, 1, 1, 0, 1, 0, 0, '2025-04-29 22:12:30.046391', '2025-04-29 22:12:30.046391') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.2ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Nidia', 'Ratke', '(917) 267-4133', 'olin@monahan.example', '96604 Williamson Stream', 'Freeport', 'NY', '29754', 0, 1, 0, 1, 0, 0, 0, 1, 0, '2025-04-29 22:12:30.053373', '2025-04-29 22:12:30.053373') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Yuriko', 'Koch', '(716) 653-9564', 'ian_wolf@harris.test', '779 Larson Glens', 'Glen Cove', 'NY', '97946', 1, 1, 0, 1, 0, 0, 0, 0, 0, '2025-04-29 22:12:30.061101', '2025-04-29 22:12:30.061101') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Tomas', 'Fahey', '(845) 453-5483', 'keenan@smitham.test', '6796 Toney Estate', 'Glen Cove', 'NY', '27180', 1, 1, 0, 0, 0, 0, 0, 1, 0, '2025-04-29 22:12:30.068589', '2025-04-29 22:12:30.068589') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Alesia', 'Toy', '(929) 739-1575', 'yolanda_kris@connelly.example', '7442 Batz Common', 'Freeport', 'NY', '97171', 1, 1, 0, 0, 1, 1, 1, 0, 0, '2025-04-29 22:12:30.075905', '2025-04-29 22:12:30.075905') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (1.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Antonio', 'Lehner', '(680) 605-6398', 'federico@littel.example', '1506 Boyle Drives', 'Yonkers', 'NY', '53158', 0, 1, 1, 0, 0, 0, 0, 1, 0, '2025-04-29 22:12:30.083475', '2025-04-29 22:12:30.083475') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.1ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Roberto', 'Wolff', '(347) 582-5064', 'carey_nitzsche@jerde-torp.example', '71397 Tamara Pass', 'Mount Vernon', 'NY', '54809', 1, 0, 0, 1, 0, 0, 1, 0, 1, '2025-04-29 22:12:30.092110', '2025-04-29 22:12:30.092110') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.3ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Eric', 'Thiel', '(585) 733-6690', 'domingo@sawayn.test', '7391 Bechtelar Ford', 'Schenectady', 'NY', '50586', 1, 1, 1, 1, 0, 1, 0, 1, 0, '2025-04-29 22:12:30.100260', '2025-04-29 22:12:30.100260') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Create (2.2ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "phone", "email", "address", "city", "state", "zip_code", "texts", "calls", "internship", "higher_ed", "climate_change", "democracy", "poverty", "mass_transit", "consumer", "created_at", "updated_at") VALUES ('Franklyn', 'Howell', '(607) 403-1954', 'marco@pouros.test', '82829 Valery Burgs', 'Glen Cove', 'NY', '94003', 0, 0, 0, 1, 1, 0, 0, 0, 0, '2025-04-29 22:12:30.108004', '2025-04-29 22:12:30.108004') RETURNING "id" /*application='QccOrg'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='QccOrg'*/[0m
+  [1m[36mStudent Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "students" /*application='QccOrg'*/[0m
+  [1m[36mStudent Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "students" WHERE "students"."internship" = 1 /*application='QccOrg'*/[0m
+  [1m[36mStudent Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "students" WHERE "students"."higher_ed" = 1 /*application='QccOrg'*/[0m
+  [1m[36mStudent Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "students" WHERE "students"."texts" = 1 /*application='QccOrg'*/[0m
+  [1m[36mStudent Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "students" WHERE "students"."calls" = 1 /*application='QccOrg'*/[0m
+  [1m[36mStudent Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "students" WHERE "students"."climate_change" = 1 /*application='QccOrg'*/[0m
+  [1m[36mStudent Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "students" WHERE "students"."democracy" = 1 /*application='QccOrg'*/[0m
+  [1m[36mStudent Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "students" WHERE "students"."poverty" = 1 /*application='QccOrg'*/[0m
+  [1m[36mStudent Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "students" WHERE "students"."mass_transit" = 1 /*application='QccOrg'*/[0m
+  [1m[36mStudent Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "students" WHERE "students"."consumer" = 1 /*application='QccOrg'*/[0m
+Started GET "/" for 146.111.194.22 at 2025-04-29 22:12:45 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='QccOrg'*/[0m
+Processing by StudentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (1.9ms)[0m  [1m[34mSELECT "students".* FROM "students" /*action='index',application='QccOrg',controller='students'*/[0m
+  ↳ app/views/students/index.html.erb:53
+  Rendered students/index.html.erb within layouts/application (Duration: 25.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.4ms | GC: 0.0ms)
+Completed 200 OK in 289ms (Views: 38.2ms | ActiveRecord: 3.1ms (1 query, 0 cached) | GC: 64.5ms)
+
+
+Started GET "/students/3" for 146.111.194.22 at 2025-04-29 22:12:51 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 3 LIMIT 1 /*action='show',application='QccOrg',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:63:in `set_student'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 4.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/students/2" for 146.111.194.22 at 2025-04-29 22:12:51 +0000
+Cannot render console from 146.111.194.22! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = 2 LIMIT 1 /*action='show',application='QccOrg',controller='students'*/[0m
+  ↳ app/controllers/students_controller.rb:63:in `set_student'
+  Rendering layout layouts/application.html.erb
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 3.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+

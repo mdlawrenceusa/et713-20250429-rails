@@ -1,0 +1,175 @@
+<%# show.html.erb - View student details %>
+
+<div class="w3-container">
+  <div class="w3-bar w3-light-grey">
+    <h1 class="w3-bar-item">Queensborough Community College <small class="w3-text-grey">Student Network</small></h1>
+  </div>
+
+  <div class="w3-panel">
+    <div class="w3-bar">
+      <%= link_to "← Back to List", students_path, class: "w3-button w3-round w3-grey" %>
+      <%= link_to "Edit", edit_student_path(@student), class: "w3-button w3-round w3-blue w3-margin-left" %>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <div class="w3-card-4 w3-margin-bottom">
+        <header class="w3-container w3-light-grey">
+          <h3>Contact Information</h3>
+        </header>
+        
+        <div class="w3-container">
+          <p>
+            <strong class="w3-text-grey">Name:</strong>
+            <%= @student.first_name %> <%= @student.last_name %>
+          </p>
+          
+          <p>
+            <strong class="w3-text-grey">Phone:</strong>
+            <%= @student.phone %>
+          </p>
+          
+          <p>
+            <strong class="w3-text-grey">Email:</strong>
+            <%= @student.email %>
+          </p>
+          
+          <p>
+            <strong class="w3-text-grey">Address:</strong>
+            <%= @student.address %>
+            <br><%= @student.city %>, <%= @student.state %> <%= @student.zip_code %>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="w3-half">
+      <div class="w3-card-4 w3-margin-bottom">
+        <header class="w3-container w3-light-grey">
+          <h3>Preferences & Status</h3>
+        </header>
+        
+        <div class="w3-container">
+          <table class="w3-table">
+            <tr>
+              <td><strong class="w3-text-grey">Text Messages:</strong></td>
+              <td>
+                <% if @student.texts %>
+                  <span class="w3-text-blue">✓</span>
+                <% else %>
+                  <span>-</span>
+                <% end %>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><strong class="w3-text-grey">Phone Calls:</strong></td>
+              <td>
+                <% if @student.calls %>
+                  <span class="w3-text-blue">✓</span>
+                <% else %>
+                  <span>-</span>
+                <% end %>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><strong class="w3-text-grey">Internship:</strong></td>
+              <td>
+                <% if @student.internship %>
+                  <span class="w3-text-blue">✓</span>
+                <% else %>
+                  <span>-</span>
+                <% end %>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><strong class="w3-text-grey">Higher Education:</strong></td>
+              <td>
+                <% if @student.higher_ed %>
+                  <span class="w3-text-blue">✓</span>
+                <% else %>
+                  <span>-</span>
+                <% end %>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      
+      <div class="w3-card-4">
+        <header class="w3-container w3-light-grey">
+          <h3>Issue Interests</h3>
+        </header>
+        
+        <div class="w3-container">
+          <table class="w3-table">
+            <tr>
+              <td><strong class="w3-text-grey">Climate Change:</strong></td>
+              <td>
+                <% if @student.climate_change %>
+                  <span class="w3-text-blue">✓</span>
+                <% else %>
+                  <span>-</span>
+                <% end %>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><strong class="w3-text-grey">Democracy:</strong></td>
+              <td>
+                <% if @student.democracy %>
+                  <span class="w3-text-blue">✓</span>
+                <% else %>
+                  <span>-</span>
+                <% end %>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><strong class="w3-text-grey">Poverty:</strong></td>
+              <td>
+                <% if @student.poverty %>
+                  <span class="w3-text-blue">✓</span>
+                <% else %>
+                  <span>-</span>
+                <% end %>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><strong class="w3-text-grey">Mass Transit:</strong></td>
+              <td>
+                <% if @student.mass_transit %>
+                  <span class="w3-text-blue">✓</span>
+                <% else %>
+                  <span>-</span>
+                <% end %>
+              </td>
+            </tr>
+            
+            <tr>
+              <td><strong class="w3-text-grey">Consumer:</strong></td>
+              <td>
+                <% if @student.consumer %>
+                  <span class="w3-text-blue">✓</span>
+                <% else %>
+                  <span>-</span>
+                <% end %>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-panel">
+    <div class="w3-bar">
+      <%= link_to "Edit", edit_student_path(@student), class: "w3-button w3-round w3-blue" %>
+      <%= button_to "Delete", @student, method: :delete, data: { confirm: "Are you sure?" }, class: "w3-button w3-round w3-red" %>
+    </div>
+  </div>
+</div>

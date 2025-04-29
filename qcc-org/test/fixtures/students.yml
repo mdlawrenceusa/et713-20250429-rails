@@ -1,0 +1,39 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  phone: MyString
+  email: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip_code: MyString
+  texts: false
+  calls: false
+  internship: false
+  higher_ed: false
+  climate_change: false
+  democracy: false
+  poverty: false
+  mass_transit: false
+  consumer: false
+
+two:
+  first_name: MyString
+  last_name: MyString
+  phone: MyString
+  email: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip_code: MyString
+  texts: false
+  calls: false
+  internship: false
+  higher_ed: false
+  climate_change: false
+  democracy: false
+  poverty: false
+  mass_transit: false
+  consumer: false

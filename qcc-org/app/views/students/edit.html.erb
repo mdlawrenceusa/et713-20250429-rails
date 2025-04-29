@@ -1,0 +1,166 @@
+<%# edit.html.erb - Edit student entry %>
+
+<div class="w3-container">
+  <div class="w3-bar w3-light-grey">
+    <h1 class="w3-bar-item">Queensborough Community College <small class="w3-text-grey">Student Network</small></h1>
+  </div>
+
+  <div class="w3-panel">
+    <div class="w3-bar">
+      <%= link_to "← Back", student_path(@student), class: "w3-button w3-round w3-grey" %>
+    </div>
+  </div>
+
+  <div class="w3-card-4 w3-margin-bottom">
+    <header class="w3-container w3-light-grey">
+      <h3>Edit Student Information</h3>
+    </header>
+
+    <div class="w3-container w3-padding">
+      <%= form_with(model: @student, class: "w3-container") do |form| %>
+        <% if @student.errors.any? %>
+          <div class="w3-panel w3-pale-red w3-leftbar w3-border-red">
+            <h4><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h4>
+            <ul>
+              <% @student.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <div class="w3-margin-bottom">
+              <%= form.label :first_name, class: "w3-text-grey" %>
+              <%= form.text_field :first_name, class: "w3-input w3-border w3-round" %>
+            </div>
+          </div>
+          
+          <div class="w3-half">
+            <div class="w3-margin-bottom">
+              <%= form.label :last_name, class: "w3-text-grey" %>
+              <%= form.text_field :last_name, class: "w3-input w3-border w3-round" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-margin-bottom">
+          <%= form.label :phone, class: "w3-text-grey" %>
+          <%= form.text_field :phone, class: "w3-input w3-border w3-round" %>
+        </div>
+
+        <div class="w3-margin-bottom">
+          <%= form.label :email, class: "w3-text-grey" %>
+          <%= form.email_field :email, class: "w3-input w3-border w3-round" %>
+        </div>
+
+        <div class="w3-margin-bottom">
+          <%= form.label :address, class: "w3-text-grey" %>
+          <%= form.text_field :address, class: "w3-input w3-border w3-round" %>
+        </div>
+
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <div class="w3-margin-bottom">
+              <%= form.label :city, class: "w3-text-grey" %>
+              <%= form.text_field :city, class: "w3-input w3-border w3-round" %>
+            </div>
+          </div>
+          
+          <div class="w3-quarter">
+            <div class="w3-margin-bottom">
+              <%= form.label :state, class: "w3-text-grey" %>
+              <%= form.select :state, 
+                  options_for_select([
+                    ['Select...', ''],
+                    ['NY', 'NY'], 
+                    ['NJ', 'NJ'], 
+                    ['CT', 'CT'],
+                    ['PA', 'PA'],
+                    ['Other', 'Other']
+                  ], @student.state), 
+                  {}, 
+                  { class: "w3-select w3-border w3-round" } 
+              %>
+            </div>
+          </div>
+          
+          <div class="w3-quarter">
+            <div class="w3-margin-bottom">
+              <%= form.label :zip_code, class: "w3-text-grey" %>
+              <%= form.text_field :zip_code, class: "w3-input w3-border w3-round" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-row-padding">
+          <div class="w3-third">
+            <div class="w3-card w3-padding">
+              <h4>Communication Preferences</h4>
+              <div class="w3-margin-bottom">
+                <%= form.check_box :texts, class: "w3-check" %>
+                <%= form.label :texts, "Text Messages", class: "w3-text-grey" %>
+              </div>
+
+              <div class="w3-margin-bottom">
+                <%= form.check_box :calls, class: "w3-check" %>
+                <%= form.label :calls, "Phone Calls", class: "w3-text-grey" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="w3-third">
+            <div class="w3-card w3-padding">
+              <h4>Status</h4>
+              <div class="w3-margin-bottom">
+                <%= form.check_box :internship, class: "w3-check" %>
+                <%= form.label :internship, "Internship", class: "w3-text-grey" %>
+              </div>
+
+              <div class="w3-margin-bottom">
+                <%= form.check_box :higher_ed, class: "w3-check" %>
+                <%= form.label :higher_ed, "Higher Ed", class: "w3-text-grey" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="w3-third">
+            <div class="w3-card w3-padding">
+              <h4>Issue Interests</h4>
+              <div class="w3-margin-bottom">
+                <%= form.check_box :climate_change, class: "w3-check" %>
+                <%= form.label :climate_change, "Climate Change", class: "w3-text-grey" %>
+              </div>
+
+              <div class="w3-margin-bottom">
+                <%= form.check_box :democracy, class: "w3-check" %>
+                <%= form.label :democracy, "Democracy", class: "w3-text-grey" %>
+              </div>
+
+              <div class="w3-margin-bottom">
+                <%= form.check_box :poverty, class: "w3-check" %>
+                <%= form.label :poverty, "Poverty", class: "w3-text-grey" %>
+              </div>
+
+              <div class="w3-margin-bottom">
+                <%= form.check_box :mass_transit, class: "w3-check" %>
+                <%= form.label :mass_transit, "Mass Transit", class: "w3-text-grey" %>
+              </div>
+
+              <div class="w3-margin-bottom">
+                <%= form.check_box :consumer, class: "w3-check" %>
+                <%= form.label :consumer, "Consumer", class: "w3-text-grey" %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-padding-16 w3-center">
+          <%= form.submit "Update", class: "w3-button w3-blue w3-round" %>
+          <%= link_to "Cancel", student_path(@student), class: "w3-button w3-round w3-margin-left" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

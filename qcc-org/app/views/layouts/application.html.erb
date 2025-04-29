@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QCC Student Network</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+      .checkmark {
+        color: #2196F3;
+        font-weight: bold;
+      }
+      .w3-hover-shadow:hover {
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+      }
+    </style>
+    
+    <%= yield :styles %>
+  </head>
+
+  <body>
+    <div class="w3-top">
+      <div class="w3-bar w3-blue">
+        <a href="<%= students_path %>" class="w3-bar-item w3-button w3-mobile">QCC Student Network</a>
+        <a href="<%= students_path %>" class="w3-bar-item w3-button w3-mobile">Home</a>
+        <a href="<%= new_student_path %>" class="w3-bar-item w3-button w3-mobile">Add Student</a>
+        
+        <div class="w3-dropdown-hover w3-mobile">
+          <button class="w3-button">Reports <i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#" class="w3-bar-item w3-button">Internship Students</a>
+            <a href="#" class="w3-bar-item w3-button">Higher Ed Students</a>
+            <a href="#" class="w3-bar-item w3-button">Issue Interests</a>
+          </div>
+        </div>
+        
+        <div class="w3-right w3-hide-small">
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Admin</a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i> Settings</a>
+        </div>
+      </div>
+    </div>
+    
+    <div style="margin-top:50px;padding:15px;">
+      <% if notice %>
+        <div class="w3-panel w3-pale-green w3-border w3-border-green w3-display-container">
+          <span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>
+          <p><%= notice %></p>
+        </div>
+      <% end %>
+      
+      <% if alert %>
+        <div class="w3-panel w3-pale-red w3-border w3-border-red w3-display-container">
+          <span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>
+          <p><%= alert %></p>
+        </div>
+      <% end %>
+      
+      <%= yield %>
+    </div>
+    
+    <footer class="w3-container w3-blue w3-padding-16">
+      <div class="w3-center">
+        <p>QCC Student Network &copy; <%= Time.now.year %> | <a href="#" class="w3-text-white">Privacy Policy</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
